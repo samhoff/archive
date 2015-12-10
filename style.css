@@ -24,3 +24,10 @@
     margin-right:-20px;
     width="100%";
   }
+  div#viewer {
+    padding:0px;
+    height:calc(100vh - 100px);
+    margin-bottom:0px;
+    background-color:black;
+    overflow-y:hidden;
+  }
