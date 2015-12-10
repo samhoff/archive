@@ -1,5 +1,5 @@
 function update() {
-              document.getElementById("viewer").innerHTML='No results found.'
+              document.getElementById("viewer").innerHTML=''
               var archivevalues = document.getElementById("month").value + document.getElementById("date").value + document.getElementById("year").value;
               var HRTemplate = Handlebars.compile($('#makeurl').html());
               $('#viewer').sheetrock({
