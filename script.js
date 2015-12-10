@@ -1,5 +1,11 @@
-﻿function update() {
-    var archivevalues = document.getElementById("date").value.split(":");
-    document.getElementById("viewer").innerHTML = '<iframe src="https://archive.org/stream/ucladailybruin' + archivevalues[0] + 'losa?ui=zoom#page/n' + archivevalues[1] + '/mode/1up" width="100%" height="100%" frameborder="0"></iframe>'
-        ;
+function update() {
+              document.getElementById("viewer").innerHTML='No results found.'
+              var archivevalues = document.getElementById("month").value + document.getElementById("date").value + document.getElementById("year").value;
+              var HRTemplate = Handlebars.compile($('#makeurl').html());
+              $('#viewer').sheetrock({
+                url: "https://docs.google.com/spreadsheets/d/1RlZUG0NOUMNSoSxo1RdOv76aNsyHzkZJS_JX2U-WQi8/edit#gid=0",
+                query: "select A,D,E where F = '" + archivevalues + "'",
+                labels: ['Volume', 'Page'],
+                rowTemplate: HRTemplate
+              });
 }
