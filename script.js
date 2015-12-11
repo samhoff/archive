@@ -1,11 +1,8 @@
 function update() {
-              document.getElementById("viewer").innerHTML=''
-              var archivevalues = document.getElementById("month").value + document.getElementById("date").value + document.getElementById("year").value;
-              var HRTemplate = Handlebars.compile($('#makeurl').html());
-              $('#viewer').sheetrock({
-                url: "https://docs.google.com/spreadsheets/d/1RlZUG0NOUMNSoSxo1RdOv76aNsyHzkZJS_JX2U-WQi8/edit#gid=0",
-                query: "select A,D,E where F = '" + archivevalues + "'",
-                labels: ['Volume', 'Page'],
-                rowTemplate: HRTemplate
-              });
+var selectedDate = new Date(document.getElementById("year").value, document.getElementById("month").value, document.getElementById("date").value).getTime();
+if (new Date(1915, 09, 10).getTime() <= selectedDate && selectedDate <= new Date(1937, 04, 16).getTime()) {
+ document.getElementById("viewer").innerHTML='<iframe src="https://archive.org/stream/ucladailybruin01losa?ui=zoom#page/n03/mode/1up" width="100%" height="100%" frameborder="0"></iframe>'
+} else {
+ alert('There doesn\'t appear to be an issue of the Daily Bruin for the date you\'ve selected.')
+}
 }
