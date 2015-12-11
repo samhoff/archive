@@ -323,7 +323,7 @@ if (new Date(2002, 12, 09).getTime() < selectedDate) {
 } else if (selectedDate <= new Date(1915, 09, 09).getTime()) {
  alert('The Daily Bruin\'s archives begin on September 10, 1915.')
 }
-if (new Date(1915, 09, 10).getTime() <= selectedDate && selectedDate <= new Date(2002, 10, 10).getTime()) {
+if (new Date(1915, 09, 10).getTime() <= selectedDate && selectedDate <= new Date(2002, 12, 09).getTime()) {
 document.getElementById("viewer").innerHTML='<iframe src="https://archive.org/stream/ucladailybruin' + volume + 'losa?ui=#page/n' + page + '/mode/1up" width="100%" height="100%" frameborder="0"></iframe>'
 }
 }
