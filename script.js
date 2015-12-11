@@ -8,9 +8,42 @@ if (new Date(2002, 10, 11).getTime() <= selectedDate) {
 } else if (new Date(1954, 10, 25).getTime() <= selectedDate) {
  var volume = '32'
  var page = '312'
+} else if (new Date(1948, 10, 22).getTime() <= selectedDate) {
+ var volume = '26'
+ var page = '07'
+} else if (new Date(1947, 10, 06).getTime() <= selectedDate) {
+ var volume = '25'
+ var page = '03'
+} else if (new Date(1946, 05, 21).getTime() <= selectedDate) {
+ var volume = '24'
+ var page = '04'
+} else if (new Date(1945, 01, 24).getTime() <= selectedDate) {
+ var volume = '23'
+ var page = '04'
+} else if (new Date(1943, 02, 18).getTime() <= selectedDate) {
+ var volume = '22'
+ var page = '04'
+} else if (new Date(1941, 12, 02).getTime() <= selectedDate) {
+ var volume = '21'
+ var page = '04'
+} else if (new Date(1940, 11, 08).getTime() <= selectedDate) {
+ var volume = '20'
+ var page = '04'
+} else if (new Date(1940, 02, 15).getTime() <= selectedDate) {
+ var volume = '19'
+ var page = '04'
+} else if (new Date(1938, 12, 05).getTime() <= selectedDate) {
+ var volume = '18'
+ var page = '04'
+} else if (new Date(1937, 11, 12).getTime() <= selectedDate) {
+ var volume = '17'
+ var page = '03'
 } else if (new Date(1937, 04, 16).getTime() <= selectedDate) {
  var volume = '16'
  var page = '230'
+} else if (new Date(1937, 01, 06).getTime() <= selectedDate) {
+ var volume = '16'
+ var page = '03'
 } else if (new Date(1936, 03, 10).getTime() <= selectedDate) {
  var volume = '15'
  var page = '03'
@@ -60,6 +93,6 @@ if (new Date(2002, 10, 11).getTime() <= selectedDate) {
  alert('The Daily Bruin\'s archives begin on September 10, 1915.')
 }
 if (new Date(1915, 09, 10).getTime() <= selectedDate && selectedDate <= new Date(2002, 10, 10).getTime()) {
-document.getElementById("viewer").innerHTML='<iframe src="https://archive.org/stream/ucladailybruin' + volume + 'losa?ui=zoom#page/n' + page + '/mode/1up" width="100%" height="100%" frameborder="0"></iframe>'
+document.getElementById("viewer").innerHTML='<iframe src="https://archive.org/stream/ucladailybruin' + volume + 'losa?ui=#page/n' + page + '/mode/1up" width="100%" height="100%" frameborder="0"></iframe>'
 }
 }
