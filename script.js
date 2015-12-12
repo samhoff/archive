@@ -283,7 +283,7 @@ if (new Date(2002, 12, 09).getTime() < selectedDate) {
  var page = '03'
 } else if (new Date(1968, 11, 25).getTime() <= selectedDate) {
  var volume = '50'
- var page = '05'
+ var page = '06'
 } else if (new Date(1968, 05, 07).getTime() <= selectedDate) {
  var volume = '49'
  var page = '03'
