@@ -1,4 +1,4 @@
-  body {
+﻿  body {
     padding: 20px;
     background-color: black;
   }
@@ -19,13 +19,6 @@
   }
   div#viewer {
     padding:0px;
-<<<<<<< HEAD
-    height:calc(100vh - 100px);
-    margin-bottom:0px;
-    background-color:black;
-    overflow-y:hidden;
-  }
-=======
     height:calc(100vh - 69px);
     margin-top:0px;
     margin-left:-20px;
@@ -112,4 +105,3 @@
 .sidebar-nav li a:focus {
     text-decoration: none;
 }
->>>>>>> refs/remotes/origin/master
