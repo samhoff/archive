@@ -249,11 +249,8 @@ if (new Date(2016, 01, 01).getTime() <= selectedDate) {folder = '0B9y1-prT44zAeU
 } else if (new Date(1915, 09, 17).getTime() <= selectedDate) {volume = ['01', 05];
 } else if (new Date(1915, 09, 10).getTime() <= selectedDate) {volume = ['01', 03];
 }
-if (new Date(2015, 01, 01).getTime() <= selectedDate) {
+if (new Date(2003, 01, 01).getTime() <= selectedDate) {
 document.getElementById("viewer").innerHTML='<iframe src="https://drive.google.com/embeddedfolderview?id=' + folder + '#grid" width="100%" height="100%" frameborder="0"></iframe>'
-} else if (new Date(2003, 01, 01).getTime() <= selectedDate && selectedDate < new Date(2015, 01, 01).getTime()) {
-document.getElementById("viewer").innerHTML='<http://archive.media.ucla.edu/" width="100%" height="100%" frameborder="0"></iframe>'
-}
 } else if (new Date(1915, 09, 10).getTime() <= selectedDate && selectedDate < new Date(1999, 11, 01).getTime()||new Date(2001, 11, 01).getTime() <= selectedDate && selectedDate < new Date(2003, 01, 01).getTime()) {
 document.getElementById("viewer").innerHTML='<iframe src="https://archive.org/stream/ucladailybruin' + volume[0] + 'losa?ui=#page/n' + volume[1] + '/mode/1up" width="100%" height="100%" frameborder="0"></iframe>'
 } else if (selectedDate <= new Date(1915, 09, 09).getTime()) {
