@@ -10,7 +10,7 @@ var losax
 var customrotate = 0
 var preroundrotate = 0
 var driveurl = ''
-var dbpageid = '116768' //On load without specified dbpageid, dbpageid is set to 116,768.
+var dbpageid = '116770' // UPDATE: change default year on load. (Add 1)
 var reeldata = [
   [
     'reel_number',
@@ -985,7 +985,7 @@ function loadnewpage() {
   } else if (
     isInteger(Number(dbpageid)) == true &&
     Number(dbpageid) >= 116753 &&
-    Number(dbpageid) <= 116769
+    Number(dbpageid) <= 116770
   ) {
     //Dbpageid range for google drive is 116,753 to 116,768.
     var dataid = dbpageid
@@ -1009,7 +1009,9 @@ function loadnewpage() {
       '0B8WE6yj3c61XUVNMTFQ3SllGazA',
       '1IUbV74C31HOZcf9x97bDVce4hnfFKRlg',
       '1ay-ptXcLRx4yVaOH7xOeEkxmO6IVbdn0',
+			'11qpdQ-t8nt_Rtx1t5VwotACKr_l08Xrt'
     ]
+		// UPDATE: take the last part of the google drive link of the folder and add to the array above
     folder = folderlist[dataid - 116753] //Minimum range for Google Drive is 116,753.
     document.getElementById('archivedisplay').innerHTML =
       "<div id='imageframe'><iframe src='https://drive.google.com/embeddedfolderview?id=" +
@@ -3316,6 +3318,13 @@ function rundate() {
   ) {
     datebasedid = 116769
   }
+	if (
+    new Date('01/1/2020').getTime() <= selectedDate &&
+    selectedDate < new Date('01/1/2021').getTime()
+  ) {
+    datebasedid = 116770
+  }
+	// UPDATE: duplicate another if statement with everything augmented by 1
   window.location.replace(
     String(window.location).split('#')[0] + '#' + Math.round(datebasedid)
   )
